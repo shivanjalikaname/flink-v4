@@ -1,0 +1,6 @@
+---
+- name: Setting up flink cluster
+  hosts: cluster
+  roles:
+    - flink
+    - flink-slave-config

@@ -1,0 +1,12 @@
+---
+- name: Ensure python-software-propertie is installed.
+  apt: name=python-software-properties state=present
+  become: true 
+
+- name: Ensure wget is installed.
+  apt: name=wget state=present
+  become: true
+
+- name: Ensure java is installed .
+  apt: name=openjdk-8-jre-headless state=present
+  become: true

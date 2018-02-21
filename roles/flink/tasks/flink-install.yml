@@ -1,0 +1,13 @@
+---
+- name: Get the desired package of flink.
+  command: wget https://archive.apache.org/dist/flink/flink-{{ version }}/flink-{{ version }}-bin-hadoop24-scala_2.11.tgz
+  become: true
+  args:
+    creates: flink-{{ version }}-bin-hadoop24-scala_2.11.tgz
+- name: Unarchive a flink file that is already on the target  machine.
+  unarchive:
+    src: '{{ home_directory }}/flink-{{ version }}-bin-hadoop24-scala_2.11.tgz'
+    dest: "{{ home_directory }}"
+    remote_src: yes
+#https://archive.apache.org/dist/flink/flink-1.4.0/flink-1.4.0-bin-hadoop24-scala_2.11.tgz
+#https://archiive.apache.org/dist/flink/flink-1.3.2/flink-1.3.2-bin-hadoop2-scala_2.10.tgz

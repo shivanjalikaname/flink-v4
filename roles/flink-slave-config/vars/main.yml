@@ -1,0 +1,6 @@
+---
+home_directory : /home/devops
+flink_masterIP_or_hostname : 50.50.50.228
+version : 1.4.0
+slave_ip1 : 50.50.50.121
+slave_ip2 : 50.50.50.215

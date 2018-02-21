@@ -1,0 +1,16 @@
+---
+- name: Copy the flink master rpc configuration File
+  template:
+    src: flink-conf.yaml.j2
+    dest: "{{ home_directory }}/flink-{{ version }}/conf/flink-conf.yaml"
+  become: true
+- name: Copy the flink slave configuration File
+  template:
+    src: slaves.j2
+    dest: "{{ home_directory }}/flink-{{ version }}/conf/slaves"
+  become: true
+- name: Copy the flink master configuration File
+  template:
+    src: masters.j2
+    dest: "{{ home_directory }}/flink-{{ version }}/conf/masters"
+  become: true

@@ -1,0 +1,3 @@
+---
+- import_tasks: flink-config.yml
+- import_tasks: flink-cluster-start.yml

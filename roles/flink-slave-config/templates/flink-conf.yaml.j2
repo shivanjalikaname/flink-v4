@@ -1,0 +1,9 @@
+env.java.opts: "-Dconfig.resource=DEV.conf"
+jobmanager.rpc.address: {{ flink_masterIP_or_hostname }}
+jobmanager.rpc.port: 6123
+jobmanager.heap.mb: 1024
+taskmanager.heap.mb: 1024
+taskmanager.numberOfTaskSlots: 1
+taskmanager.memory.preallocate: false
+parallelism.default: 1
+jobmanager.web.port: 8081

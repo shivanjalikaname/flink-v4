@@ -1,0 +1,11 @@
+---
+#- name: Start the flink cluster
+#  command: "{{ home_directory }}/flink-{{ version }}/bin/start-cluster.sh"
+#  command: chdir={{ home_directory }}/flink-{{ version }} ./bin/start-cluster.sh
+
+- name: task name
+  shell: ./bin/start-cluster.sh
+  async: 10
+  poll: 0
+  args:
+     chdir: "{{ home_directory }}/flink-{{ version }}"
