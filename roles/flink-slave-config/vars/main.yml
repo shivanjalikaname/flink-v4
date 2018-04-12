@@ -1,6 +1,6 @@
 ---
 home_directory : /home/devops
-flink_masterIP_or_hostname : 1.2.3.4.6
+flink_masterIP_or_hostname : 1.2.3.6
 version : 1.4.0
 slave_ip1 : 1.2.3.4
 slave_ip2 : 1.2.3.5
